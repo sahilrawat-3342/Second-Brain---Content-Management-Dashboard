@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import Model  from "../DataScehma";
 // export userModel properly in DataScehma.ts
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import dotenv from "dotenv";
 
 dotenv.config();

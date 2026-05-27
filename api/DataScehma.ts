@@ -3,8 +3,6 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URI!);
-
 const user: Schema = new Schema({
     name : {type: String,unique : true,required : true},
     password : {type: String,required : true}
