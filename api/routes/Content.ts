@@ -26,7 +26,7 @@ ContentRouter.post("/create", verifyToken, async (req: Request, res: Response) =
         res.json({
             Success : true
         })
-    }catch(err){
+    }catch(err : any){
         res.json({
             Success : false,
             message : err.message

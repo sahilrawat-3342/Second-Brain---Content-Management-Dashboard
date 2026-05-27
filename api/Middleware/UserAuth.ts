@@ -15,7 +15,16 @@ async function verifyToken(req: any, res: any, next: any) {
 
     try{
         const decoded = jwt.verify(token, process.env.JWT_SECRET!);
-        req.userId = decoded.id;
+        // jwt.verify can return string or JwtPayload. Ensure we have an object with an `id`.
+        if (typeof decoded === "object" && decoded !== null && "id" in decoded) {
+            req.userId = decoded.id;
+        } else {
+            res.status(401).json({
+                success: false,
+                message: "Invalid token payload",
+            });
+            return;
+        }
         next();
         }catch(err){
             res.status(401).json({
