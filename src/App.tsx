@@ -1,21 +1,17 @@
-import { buttonVariants } from "@/components/ui/button";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
+import Dashboard from "./Pages/Dashboard";
+import SharedBrain from "./Pages/SharedBrain";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 
-function App() {
-  return (
-    <main className="flex flex-col items-center justify-center min-h-screen space-y-20">
-      <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
-        Vite, React, Shadcn-ui minimal starter
-      </h1>
-      <a
-        href="https://github.com/moinulmoin/vite-react-tailwind-starter"
-        target="_blank"
-        rel="noreferrer"
-        className={buttonVariants()}
-      >
-        ⭐️ on GitHub
-      </a>
-    </main>
-  );
+export default function App() {
+  return <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Navigate to="/signin" replace />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/share/:hash" element={<SharedBrain />} />
+    </Routes>
+  </BrowserRouter>
 }
-
-export default App;
