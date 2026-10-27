@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@vitejs/plugin-react": "^4.7.0",
     "axios": "^1.12.1",
     "bcryptjs": "^3.0.3",
     "class-variance-authority": "^0.7.0",
@@ -26,7 +27,9 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.9.1",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
@@ -39,14 +42,11 @@
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
-    "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.5.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.5.15",
-    "tailwindcss": "^3.4.19",
-    "typescript": "^5.9.3",
-    "vite": "^5.4.21"
+    "tailwindcss": "^3.4.19"
   }
 }

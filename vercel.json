@@ -4,6 +4,10 @@
     {
       "source": "/api/(.*)",
       "destination": "/api/index.ts"
+    },
+    {
+      "source": "/((?!api/|assets/|favicon.ico|@vite|@react-refresh|src/|node_modules/).*)",
+      "destination": "/index.html"
     }
   ]
 }
